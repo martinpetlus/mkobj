@@ -1,0 +1,11 @@
+{
+  "name": "mkobj",
+  "version": "0.1.0",
+  "description": "Make creating of objects with conditional properties easier.",
+  "main": "lib/index.js",
+  "author": "Martin Petluš <martinpetlus@gmail.com>",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "MIT"
+}
