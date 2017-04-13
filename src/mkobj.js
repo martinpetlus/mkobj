@@ -1,4 +1,4 @@
-export default function mkobj(obj, ...props) {
+module.exports = function mkobj(obj, ...props) {
   if (Array.isArray(obj)) {
     props.unshift(obj);
 
@@ -14,4 +14,4 @@ export default function mkobj(obj, ...props) {
   });
 
   return obj;
-}
+};

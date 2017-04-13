@@ -1,6 +1,7 @@
 {
   "presets": [
     ["env", {
+      "modules": "umd",
       "targets": {
         "browsers": "> 1%, last 2 versions"
       }
