@@ -12,4 +12,6 @@ export default function mkobj(obj, ...props) {
       obj[prop[1]] = prop[2];
     }
   });
+
+  return obj;
 }
