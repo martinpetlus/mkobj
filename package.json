@@ -8,7 +8,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "babel src --out-file lib/index.js"
+    "build": "babel src --out-file lib/mkobj.js"
   },
   "license": "MIT",
   "devDependencies": {
