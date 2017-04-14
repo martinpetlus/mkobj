@@ -1,4 +1,6 @@
 module.exports = function mkobj(obj, ...props) {
+  if (arguments.length === 0) return {};
+
   if (Array.isArray(obj)) {
     props.unshift(obj);
 
