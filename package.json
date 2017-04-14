@@ -8,7 +8,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "babel src --out-file lib/mkobj.js"
+    "test": "npm run build && mocha --compilers js:babel-core/register",
+    "pretest": "npm run lint",
+    "build": "babel src --out-file lib/mkobj.js",
+    "lint": "eslint src test"
   },
   "license": "MIT",
   "devDependencies": {
