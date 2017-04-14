@@ -14,6 +14,16 @@
     "prepublish": "npm test && npm run build",
     "lint": "eslint src test"
   },
+  "keywords": [
+    "make",
+    "create",
+    "object",
+    "easy",
+    "easier",
+    "conditional",
+    "property",
+    "properties"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
