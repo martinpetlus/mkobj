@@ -7,6 +7,14 @@
   "directories": {
     "lib": "lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinpetlus/mkobj.git"
+  },
+  "homepage": "https://github.com/martinpetlus/mkobj",
+  "bugs": {
+    "url": "https://github.com/martinpetlus/mkobj/issues"
+  },
   "scripts": {
     "test": "npm run build && mocha --compilers js:babel-core/register",
     "pretest": "npm run lint",
