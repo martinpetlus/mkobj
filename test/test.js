@@ -16,6 +16,12 @@ describe('mkobj', () => {
     expect(mkobj([true, 'a', 'a'])).to.eql({ a: 'a' });
   });
 
+  it('should return unchanged destination object if props are not specified', () => {
+    const dst = { color: 'red' };
+    expect(mkobj(dst)).to.equal(dst);
+    expect(mkobj(dst)).to.eql(dst);
+  });
+
   it('should copy props into specified object', () => {
     const dst = {};
     const obj = mkobj(dst, [true, 'a', 'a']);
