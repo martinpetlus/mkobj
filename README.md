@@ -2,7 +2,7 @@
 
 ---
 
-This JavaScript utility allows you to easily create **objects with optional properties**, as this is not very straightforward in JS.
+This JavaScript utility allows you to easily create **objects with optional (conditional) properties**, as this is not very straightforward in JS.
 
 ## Installation
 
