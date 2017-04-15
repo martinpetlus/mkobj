@@ -46,7 +46,7 @@ export default function MyReactHeader({ text, highlighted }) {
     <div
       style={mkobj(
         { color: 'blue', fontSize: 25 },
-        [ highlighted, 'fontWeight', 600 ]
+        [ highlighted, 'fontWeight', 600 ],
       )}
     >
       {text}
