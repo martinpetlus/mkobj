@@ -53,20 +53,19 @@ describe('mkobj', () => {
   });
 
   it('should copy props in input order', () => {
-    expect(mkobj(
-      [true, 'a', 1],
-      [true, 'a', 2],
-    )).to.eql({ a: 2 });
+    expect(mkobj([true, 'a', 1], [true, 'a', 2])).to.eql({ a: 2 });
   });
 
   it('should ignore all falsy condition values', () => {
-    expect(mkobj(
-      [false, 'a', 'a'],
-      [null, 'b', 'b'],
-      [undefined, 'c', 'c'],
-      [NaN, 'f', 'f'],
-      ['', 'd', 'd'],
-      [0, 'e', 'e'],
-    )).to.eql({});
+    expect(
+      mkobj(
+        [false, 'a', 'a'],
+        [null, 'b', 'b'],
+        [undefined, 'c', 'c'],
+        [NaN, 'f', 'f'],
+        ['', 'd', 'd'],
+        [0, 'e', 'e'],
+      ),
+    ).to.eql({});
   });
 });
