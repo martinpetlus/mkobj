@@ -9,6 +9,7 @@ This JavaScript utility allows you to easily create **objects with optional (con
 Install with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/):
 
 npm:
+
 ```sh
 npm install --save mkobj
 ```
