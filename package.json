@@ -1,6 +1,6 @@
 {
   "name": "mkobj",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Make creating of objects with conditional properties easier.",
   "main": "lib/mkobj.js",
   "author": "Martin Petluš <martinpetlus@gmail.com>",
