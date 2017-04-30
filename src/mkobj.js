@@ -9,9 +9,11 @@ module.exports = function mkobj(obj, ...props) {
   }
 
   props.forEach((prop) => {
+    const propValue = prop.length === 2 ? prop[0] : prop[2];
+
     if (prop[0]) {
       // eslint-disable-next-line no-param-reassign
-      obj[prop[1]] = prop[2];
+      obj[prop[1]] = propValue;
     }
   });
 

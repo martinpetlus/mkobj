@@ -29,6 +29,11 @@ describe('mkobj', () => {
     expect(obj).to.eql({ a: 'a' });
   });
 
+  it('should treat condition as value when prop value is not provided', () => {
+    const test = { prop: 8 };
+    expect(mkobj([test.prop, 'x'])).to.eql({ x: 8 });
+  });
+
   it('should correctly combine truthy and falsy props', () => {
     const prop = 'd';
     const val = () => {};
@@ -41,6 +46,7 @@ describe('mkobj', () => {
       [0, 4, 'e'],
       [5, 5, 'f'],
       [val, 'fn', val],
+      [val, 'fn2'],
     );
 
     expect(obj).to.eql({
@@ -49,6 +55,7 @@ describe('mkobj', () => {
       d: -9,
       5: 'f',
       fn: val,
+      fn2: val,
     });
   });
 
@@ -57,6 +64,8 @@ describe('mkobj', () => {
   });
 
   it('should ignore all falsy condition values', () => {
+    const test = { prop: 0 };
+
     expect(
       mkobj(
         [false, 'a', 'a'],
@@ -65,6 +74,7 @@ describe('mkobj', () => {
         [NaN, 'f', 'f'],
         ['', 'd', 'd'],
         [0, 'e', 'e'],
+        [test.prop, 'g'],
       ),
     ).to.eql({});
   });
