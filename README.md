@@ -73,7 +73,7 @@ const obj = mkobj(
 ); // { foo: 'bar' }
 ```
 
-All properties with falsy condition values are ignored and not copied into destination object.
+All properties with **falsy** condition values are ignored and not copied into destination object.
 
 You can even use `mkobj` to create empty object instead of object literal.
 
@@ -85,7 +85,21 @@ Properties are copied in order, so you can take advantage of that and overwrite 
 
 ```js
 const obj = mkobj(
-  [true, 'foo', 'bar1']
-  [true, 'foo', 'bar2']
+  [true, 'foo', 'bar1'],
+  [true, 'foo', 'bar2'],
 ); // { foo: 'bar2' }
+```
+
+Also you can use shorthand optional properties where condition value is used as property value.
+
+```js
+const test = {
+  bar1: 8,
+  bar2: '',
+};
+
+const obj = mkobj(
+  [test.bar1, 'foo1'],
+  [test.bar2, 'foo2'],
+); // { foo1: 8 }
 ```
